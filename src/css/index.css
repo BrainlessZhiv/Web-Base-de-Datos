@@ -1,0 +1,11 @@
+th:hover {
+    cursor: pointer;  
+}
+
+.sort-asc::after {
+    content: " ▲";
+}
+
+.sort-desc::after {
+    content: " ▼";
+}
