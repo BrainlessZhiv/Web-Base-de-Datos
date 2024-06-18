@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Base de Datos</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Base de datos</h1>
+        <h2>Añadir entrada</h2>
+        <form id="entryForm">
+
+            <label for="entryName" class="form-label">Nombre</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="entryName" placeholder="Introducir nombre"
+                    aria-label="Nombre" aria-describedby="basic-addon1">
+            </div>
+
+            <label for="entryAmount" class="form-label">Cantidad</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="entryAmount" aria-label="Amount (to the nearest dollar)"
+                    placeholder="Introducir cantidad">
+                <span class="input-group-text">€</span>
+            </div>
+
+            <label for="entryInfo" class="form-label">Información</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="entryInfo" placeholder="Introducir información"
+                    aria-label="Información">
+            </div>
+
+            <label for="entryDate" class="form-label">Fecha</label>
+            <div class="input-group mb-3">
+                <input type="date" class="form-control" id="entryDate" aria-label="Fecha">
+            </div>
+            <button type="submit" class="btn btn-primary">Añadir entrada</button>
+        </form>
+        <hr>
+        <h2>Entradas</h2>
+        <form id="filterForm" class="mb-3">
+            <label for="filterInput" class="form-label">Filtrar por nombre:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="filterInput" placeholder="Nombre a buscar">
+            </div>
+
+            <label for="filterAmount" class="form-label">Filtrar por cantidad:</label>
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" id="filterAmount" placeholder="Cantidad a buscar">
+            </div>
+
+            <label for="filterDate" class="form-label">Fecha:</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Desde:</span>
+                <input type="date" class="form-control" id="filterDateFrom">
+                <span class="input-group-text">Hasta:</span>
+                <input type="date" class="form-control" id="filterDateTo">
+            </div>
+        </form>
+
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th scope="col" id="tableId">#</th>
+                    <th scope="col" id="tableName">Nombre</th>
+                    <th scope="col" id="tableAmount">Cantidad</th>
+                    <th scope="col" id="tableInfo">Información</th>
+                    <th scope="col" id="tableDate">Fecha</th>
+                    <th scope="col" id="tableDelete">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Entries will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
