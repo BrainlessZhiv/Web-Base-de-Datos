@@ -60,7 +60,7 @@ app.post("/add-entry", async (req, res) => {
   }
 
   const query =
-    "INSERT INTO" + process.env.DB_TABLE + "(name, amount, info, date) VALUES (?, ?, ?, ?)";
+    "INSERT INTO " + process.env.DB_TABLE + "(name, amount, info, date) VALUES (?, ?, ?, ?)";
 
   connection.query(
     query,
